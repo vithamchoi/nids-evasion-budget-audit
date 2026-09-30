@@ -1,0 +1,177 @@
+{
+  "config": {
+    "model": "openai/gpt-oss-20b",
+    "oracle_budget": 20,
+    "rpm": 6.0,
+    "note": "budget vs ORIGINAL vector; no patience rule"
+  },
+  "llm": {
+    "evaded": 0,
+    "n": 13,
+    "ESR": 0.0,
+    "CI": [
+      0.0,
+      24.7
+    ],
+    "mean_dP": -0.0123,
+    "mean_calls": 10.4
+  },
+  "raw": [
+    {
+      "id": 276566,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20,
+        "llm_calls": 20
+      }
+    },
+    {
+      "id": 289294,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20,
+        "llm_calls": 24
+      }
+    },
+    {
+      "id": 284510,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20,
+        "llm_calls": 20
+      }
+    },
+    {
+      "id": 229245,
+      "p_orig": 0.83,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.01,
+        "calls": 13,
+        "llm_calls": 60
+      }
+    },
+    {
+      "id": 333596,
+      "p_orig": 0.83,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.01,
+        "calls": 7,
+        "llm_calls": 60
+      }
+    },
+    {
+      "id": 370961,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 8,
+        "llm_calls": 60
+      }
+    },
+    {
+      "id": 314705,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.06,
+        "calls": 7,
+        "llm_calls": 60
+      }
+    },
+    {
+      "id": 323300,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 7,
+        "llm_calls": 60
+      }
+    },
+    {
+      "id": 259007,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 8,
+        "llm_calls": 60
+      }
+    },
+    {
+      "id": 284381,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 6,
+        "llm_calls": 60
+      }
+    },
+    {
+      "id": 274333,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 7,
+        "llm_calls": 60
+      }
+    },
+    {
+      "id": 316095,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 5,
+        "llm_calls": 60
+      }
+    },
+    {
+      "id": 283735,
+      "p_orig": 0.86,
+      "stratum": "High(>0.8)",
+      "llm": {
+        "evaded": false,
+        "prob": 0.86,
+        "delta": 0.0,
+        "calls": 7,
+        "llm_calls": 60
+      }
+    }
+  ]
+}

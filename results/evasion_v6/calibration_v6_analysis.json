@@ -1,0 +1,282 @@
+{
+    "source": "C:\\Users\\Admin\\Documents\\Data science\\code_hoan_chinh\\02_robust_vit_encrypted_traffic\\results\\evasion_v6\\evasion_v6_results.json",
+    "N": 107,
+    "rf_calibration_attack_tps": {
+        "ece_p_orig": 0.22,
+        "brier_p_orig_vs_y1": 0.0526,
+        "p_orig_min": 0.5251,
+        "p_orig_max": 0.828,
+        "p_orig_mean": 0.78,
+        "calibration_bins": [
+            {
+                "bin": "[0.0,0.1)",
+                "n": 0
+            },
+            {
+                "bin": "[0.1,0.2)",
+                "n": 0
+            },
+            {
+                "bin": "[0.2,0.3)",
+                "n": 0
+            },
+            {
+                "bin": "[0.3,0.4)",
+                "n": 0
+            },
+            {
+                "bin": "[0.4,0.5)",
+                "n": 0
+            },
+            {
+                "bin": "[0.5,0.6)",
+                "n": 7,
+                "mean_conf": 0.5473,
+                "frac_pos": 1.0,
+                "gap": 0.4527
+            },
+            {
+                "bin": "[0.6,0.7)",
+                "n": 0
+            },
+            {
+                "bin": "[0.7,0.8)",
+                "n": 43,
+                "mean_conf": 0.7778,
+                "frac_pos": 1.0,
+                "gap": 0.2222
+            },
+            {
+                "bin": "[0.8,0.9)",
+                "n": 57,
+                "mean_conf": 0.8103,
+                "frac_pos": 1.0,
+                "gap": 0.1897
+            },
+            {
+                "bin": "[0.9,1.0)",
+                "n": 0
+            }
+        ],
+        "note": "All v6 samples are attack TPs (y=1). ECE measures confidence vs. true label."
+    },
+    "threshold_sensitivity_v6": {
+        "thresh_30": {
+            "llm": {
+                "threshold": 0.3,
+                "evaded": 0,
+                "esr": 0.0,
+                "ci": [
+                    0.0,
+                    3.4
+                ]
+            },
+            "greedy": {
+                "threshold": 0.3,
+                "evaded": 0,
+                "esr": 0.0,
+                "ci": [
+                    0.0,
+                    3.4
+                ]
+            },
+            "random": {
+                "threshold": 0.3,
+                "evaded": 0,
+                "esr": 0.0,
+                "ci": [
+                    0.0,
+                    3.4
+                ]
+            }
+        },
+        "thresh_35": {
+            "llm": {
+                "threshold": 0.35,
+                "evaded": 0,
+                "esr": 0.0,
+                "ci": [
+                    0.0,
+                    3.4
+                ]
+            },
+            "greedy": {
+                "threshold": 0.35,
+                "evaded": 0,
+                "esr": 0.0,
+                "ci": [
+                    0.0,
+                    3.4
+                ]
+            },
+            "random": {
+                "threshold": 0.35,
+                "evaded": 0,
+                "esr": 0.0,
+                "ci": [
+                    0.0,
+                    3.4
+                ]
+            }
+        },
+        "thresh_40": {
+            "llm": {
+                "threshold": 0.4,
+                "evaded": 10,
+                "esr": 9.3,
+                "ci": [
+                    4.6,
+                    16.5
+                ]
+            },
+            "greedy": {
+                "threshold": 0.4,
+                "evaded": 6,
+                "esr": 5.6,
+                "ci": [
+                    2.1,
+                    11.8
+                ]
+            },
+            "random": {
+                "threshold": 0.4,
+                "evaded": 0,
+                "esr": 0.0,
+                "ci": [
+                    0.0,
+                    3.4
+                ]
+            }
+        },
+        "thresh_45": {
+            "llm": {
+                "threshold": 0.45,
+                "evaded": 15,
+                "esr": 14.0,
+                "ci": [
+                    8.1,
+                    22.1
+                ]
+            },
+            "greedy": {
+                "threshold": 0.45,
+                "evaded": 6,
+                "esr": 5.6,
+                "ci": [
+                    2.1,
+                    11.8
+                ]
+            },
+            "random": {
+                "threshold": 0.45,
+                "evaded": 0,
+                "esr": 0.0,
+                "ci": [
+                    0.0,
+                    3.4
+                ]
+            }
+        },
+        "thresh_50": {
+            "llm": {
+                "threshold": 0.5,
+                "evaded": 26,
+                "esr": 24.3,
+                "ci": [
+                    16.5,
+                    33.5
+                ]
+            },
+            "greedy": {
+                "threshold": 0.5,
+                "evaded": 6,
+                "esr": 5.6,
+                "ci": [
+                    2.1,
+                    11.8
+                ]
+            },
+            "random": {
+                "threshold": 0.5,
+                "evaded": 1,
+                "esr": 0.9,
+                "ci": [
+                    0.0,
+                    5.1
+                ]
+            }
+        },
+        "thresh_55": {
+            "llm": {
+                "threshold": 0.55,
+                "evaded": 26,
+                "esr": 24.3,
+                "ci": [
+                    16.5,
+                    33.5
+                ]
+            },
+            "greedy": {
+                "threshold": 0.55,
+                "evaded": 7,
+                "esr": 6.5,
+                "ci": [
+                    2.7,
+                    13.0
+                ]
+            },
+            "random": {
+                "threshold": 0.55,
+                "evaded": 4,
+                "esr": 3.7,
+                "ci": [
+                    1.0,
+                    9.3
+                ]
+            }
+        },
+        "thresh_60": {
+            "llm": {
+                "threshold": 0.6,
+                "evaded": 27,
+                "esr": 25.2,
+                "ci": [
+                    17.3,
+                    34.6
+                ]
+            },
+            "greedy": {
+                "threshold": 0.6,
+                "evaded": 9,
+                "esr": 8.4,
+                "ci": [
+                    3.9,
+                    15.4
+                ]
+            },
+            "random": {
+                "threshold": 0.6,
+                "evaded": 7,
+                "esr": 6.5,
+                "ci": [
+                    2.7,
+                    13.0
+                ]
+            }
+        }
+    },
+    "per_attack_type": {
+        "DDoS": {
+            "n": 106,
+            "p_orig_mean": 0.782,
+            "llm_esr_50": 24.5,
+            "greedy_esr_50": 5.7
+        },
+        "PortScan": {
+            "n": 1,
+            "p_orig_mean": 0.5694,
+            "llm_esr_50": 0.0,
+            "greedy_esr_50": 0.0
+        }
+    }
+}

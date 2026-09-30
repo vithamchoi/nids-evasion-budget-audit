@@ -1,0 +1,392 @@
+{
+  "note": "ECE and Brier on the Friday partition, with the isotonic map fitted only on a held-out fold of the training partition. Compare against step2, which reported in-sample numbers on the training distribution.",
+  "n_train_fit": 40000,
+  "n_isotonic_fit": 10000,
+  "in_sample_reference": {
+    "train_fold_raw": {
+      "label": "train fold, raw",
+      "n": 10000,
+      "positive_rate_pct": 12.67,
+      "accuracy_pct": 99.79,
+      "ece": 0.0031,
+      "brier": 0.0015,
+      "bins": [
+        {
+          "bin": "[0.0,0.1)",
+          "n": 8675,
+          "mean_conf": 0.0016,
+          "frac_pos": 0.0,
+          "gap": 0.0016
+        },
+        {
+          "bin": "[0.1,0.2)",
+          "n": 34,
+          "mean_conf": 0.1376,
+          "frac_pos": 0.0294,
+          "gap": 0.1082
+        },
+        {
+          "bin": "[0.2,0.3)",
+          "n": 13,
+          "mean_conf": 0.2422,
+          "frac_pos": 0.2308,
+          "gap": 0.0114
+        },
+        {
+          "bin": "[0.3,0.4)",
+          "n": 15,
+          "mean_conf": 0.351,
+          "frac_pos": 0.4667,
+          "gap": 0.1157
+        },
+        {
+          "bin": "[0.4,0.5)",
+          "n": 7,
+          "mean_conf": 0.4512,
+          "frac_pos": 0.7143,
+          "gap": 0.2631
+        },
+        {
+          "bin": "[0.5,0.6)",
+          "n": 6,
+          "mean_conf": 0.5365,
+          "frac_pos": 0.8333,
+          "gap": 0.2969
+        },
+        {
+          "bin": "[0.6,0.7)",
+          "n": 7,
+          "mean_conf": 0.6573,
+          "frac_pos": 0.7143,
+          "gap": 0.057
+        },
+        {
+          "bin": "[0.7,0.8)",
+          "n": 14,
+          "mean_conf": 0.7541,
+          "frac_pos": 0.8571,
+          "gap": 0.103
+        },
+        {
+          "bin": "[0.8,0.9)",
+          "n": 21,
+          "mean_conf": 0.8625,
+          "frac_pos": 1.0,
+          "gap": 0.1375
+        },
+        {
+          "bin": "[0.9,1.0)",
+          "n": 1208,
+          "mean_conf": 0.9969,
+          "frac_pos": 1.0,
+          "gap": 0.0031
+        }
+      ]
+    },
+    "train_fold_isotonic_in_sample": {
+      "label": "train fold, isotonic (in-sample)",
+      "n": 10000,
+      "positive_rate_pct": 12.67,
+      "accuracy_pct": 99.86,
+      "ece": 0.0,
+      "brier": 0.0011,
+      "bins": [
+        {
+          "bin": "[0.0,0.1)",
+          "n": 8710,
+          "mean_conf": 0.0001,
+          "frac_pos": 0.0001,
+          "gap": 0.0
+        },
+        {
+          "bin": "[0.1,0.2)",
+          "n": 7,
+          "mean_conf": 0.1429,
+          "frac_pos": 0.1429,
+          "gap": 0.0
+        },
+        {
+          "bin": "[0.2,0.3)",
+          "n": 9,
+          "mean_conf": 0.2222,
+          "frac_pos": 0.2222,
+          "gap": 0.0
+        },
+        {
+          "bin": "[0.4,0.5)",
+          "n": 5,
+          "mean_conf": 0.4,
+          "frac_pos": 0.4,
+          "gap": 0.0
+        },
+        {
+          "bin": "[0.7,0.8)",
+          "n": 22,
+          "mean_conf": 0.7273,
+          "frac_pos": 0.7273,
+          "gap": 0.0
+        },
+        {
+          "bin": "[0.8,0.9)",
+          "n": 16,
+          "mean_conf": 0.875,
+          "frac_pos": 0.875,
+          "gap": 0.0
+        },
+        {
+          "bin": "[0.9,1.0)",
+          "n": 1231,
+          "mean_conf": 1.0,
+          "frac_pos": 1.0,
+          "gap": 0.0
+        }
+      ]
+    }
+  },
+  "friday_out_of_sample": {
+    "raw": {
+      "label": "Friday, raw",
+      "n": 702718,
+      "positive_rate_pct": 41.1,
+      "accuracy_pct": 70.47,
+      "ece": 0.3105,
+      "brier": 0.2775,
+      "bins": [
+        {
+          "bin": "[0.0,0.1)",
+          "n": 564916,
+          "mean_conf": 0.0036,
+          "frac_pos": 0.2811,
+          "gap": 0.2774
+        },
+        {
+          "bin": "[0.1,0.2)",
+          "n": 8203,
+          "mean_conf": 0.1447,
+          "frac_pos": 0.2606,
+          "gap": 0.1159
+        },
+        {
+          "bin": "[0.2,0.3)",
+          "n": 46303,
+          "mean_conf": 0.2277,
+          "frac_pos": 0.984,
+          "gap": 0.7564
+        },
+        {
+          "bin": "[0.3,0.4)",
+          "n": 1097,
+          "mean_conf": 0.3535,
+          "frac_pos": 0.6135,
+          "gap": 0.26
+        },
+        {
+          "bin": "[0.4,0.5)",
+          "n": 620,
+          "mean_conf": 0.4449,
+          "frac_pos": 0.3258,
+          "gap": 0.1191
+        },
+        {
+          "bin": "[0.5,0.6)",
+          "n": 429,
+          "mean_conf": 0.5587,
+          "frac_pos": 0.9091,
+          "gap": 0.3504
+        },
+        {
+          "bin": "[0.6,0.7)",
+          "n": 59638,
+          "mean_conf": 0.6531,
+          "frac_pos": 0.9992,
+          "gap": 0.3461
+        },
+        {
+          "bin": "[0.7,0.8)",
+          "n": 11002,
+          "mean_conf": 0.777,
+          "frac_pos": 0.9984,
+          "gap": 0.2214
+        },
+        {
+          "bin": "[0.8,0.9)",
+          "n": 10416,
+          "mean_conf": 0.8157,
+          "frac_pos": 0.9988,
+          "gap": 0.1831
+        },
+        {
+          "bin": "[0.9,1.0)",
+          "n": 94,
+          "mean_conf": 0.9651,
+          "frac_pos": 0.617,
+          "gap": 0.3481
+        }
+      ]
+    },
+    "isotonic": {
+      "label": "Friday, isotonic (out-of-sample)",
+      "n": 702718,
+      "positive_rate_pct": 41.1,
+      "accuracy_pct": 70.475,
+      "ece": 0.2973,
+      "brier": 0.2791,
+      "bins": [
+        {
+          "bin": "[0.0,0.1)",
+          "n": 573251,
+          "mean_conf": 0.0004,
+          "frac_pos": 0.2809,
+          "gap": 0.2804
+        },
+        {
+          "bin": "[0.1,0.2)",
+          "n": 43916,
+          "mean_conf": 0.1432,
+          "frac_pos": 0.9888,
+          "gap": 0.8456
+        },
+        {
+          "bin": "[0.2,0.3)",
+          "n": 2540,
+          "mean_conf": 0.2169,
+          "frac_pos": 0.8677,
+          "gap": 0.6508
+        },
+        {
+          "bin": "[0.3,0.4)",
+          "n": 5,
+          "mean_conf": 0.3891,
+          "frac_pos": 0.0,
+          "gap": 0.3891
+        },
+        {
+          "bin": "[0.4,0.5)",
+          "n": 225,
+          "mean_conf": 0.4042,
+          "frac_pos": 0.4578,
+          "gap": 0.0536
+        },
+        {
+          "bin": "[0.5,0.6)",
+          "n": 1,
+          "mean_conf": 0.5278,
+          "frac_pos": 1.0,
+          "gap": 0.4722
+        },
+        {
+          "bin": "[0.6,0.7)",
+          "n": 4,
+          "mean_conf": 0.6458,
+          "frac_pos": 0.75,
+          "gap": 0.1042
+        },
+        {
+          "bin": "[0.7,0.8)",
+          "n": 7655,
+          "mean_conf": 0.7444,
+          "frac_pos": 0.9155,
+          "gap": 0.1711
+        },
+        {
+          "bin": "[0.8,0.9)",
+          "n": 62196,
+          "mean_conf": 0.8704,
+          "frac_pos": 0.9994,
+          "gap": 0.1289
+        },
+        {
+          "bin": "[0.9,1.0)",
+          "n": 12925,
+          "mean_conf": 0.9941,
+          "frac_pos": 0.9962,
+          "gap": 0.0021
+        }
+      ]
+    }
+  },
+  "friday_true_positives": {
+    "n": 81424,
+    "raw": {
+      "label": "Friday TPs, raw",
+      "n": 81424,
+      "positive_rate_pct": 100.0,
+      "accuracy_pct": 100.0,
+      "ece": 0.3096,
+      "brier": 0.1001,
+      "bins": [
+        {
+          "bin": "[0.5,0.6)",
+          "n": 390,
+          "mean_conf": 0.5595,
+          "frac_pos": 1.0,
+          "gap": 0.4405
+        },
+        {
+          "bin": "[0.6,0.7)",
+          "n": 59589,
+          "mean_conf": 0.6531,
+          "frac_pos": 1.0,
+          "gap": 0.3469
+        },
+        {
+          "bin": "[0.7,0.8)",
+          "n": 10984,
+          "mean_conf": 0.7771,
+          "frac_pos": 1.0,
+          "gap": 0.2229
+        },
+        {
+          "bin": "[0.8,0.9)",
+          "n": 10403,
+          "mean_conf": 0.8156,
+          "frac_pos": 1.0,
+          "gap": 0.1844
+        },
+        {
+          "bin": "[0.9,1.0)",
+          "n": 58,
+          "mean_conf": 0.9618,
+          "frac_pos": 1.0,
+          "gap": 0.0382
+        }
+      ]
+    },
+    "isotonic": {
+      "label": "Friday TPs, isotonic",
+      "n": 81424,
+      "positive_rate_pct": 100.0,
+      "accuracy_pct": 100.0,
+      "ece": 0.1195,
+      "brier": 0.0179,
+      "bins": [
+        {
+          "bin": "[0.7,0.8)",
+          "n": 6390,
+          "mean_conf": 0.75,
+          "frac_pos": 1.0,
+          "gap": 0.25
+        },
+        {
+          "bin": "[0.8,0.9)",
+          "n": 62158,
+          "mean_conf": 0.8704,
+          "frac_pos": 1.0,
+          "gap": 0.1296
+        },
+        {
+          "bin": "[0.9,1.0)",
+          "n": 12876,
+          "mean_conf": 0.994,
+          "frac_pos": 1.0,
+          "gap": 0.006
+        }
+      ]
+    },
+    "stratum_counts": {
+      "High(>0.8)": 10317,
+      "Medium(0.6 - 0.8)": 70717,
+      "Boundary(0.5 - 0.6)": 390
+    }
+  }
+}

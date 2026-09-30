@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the paper below."
+title: "Artifact for: NIDS evasion under a correctly bounded budget"
+authors:
+  - family-names: Ha
+    given-names: Son X.
+    orcid: "https://orcid.org/0000-0002-5336-0566"
+  - family-names: Tran-Truong
+    given-names: Phat T.
+    orcid: "https://orcid.org/0000-0003-3199-6333"
+  - family-names: Le
+    given-names: Xuan-Bach
+    orcid: "https://orcid.org/0009-0003-6848-5403"
+  - family-names: Huong
+    given-names: Luong Hoang
+    orcid: "https://orcid.org/0000-0002-0398-5090"
+  - family-names: Nguyen
+    given-names: Tung Q.
+    orcid: "https://orcid.org/0009-0003-5046-5535"
+  - family-names: Huy
+    given-names: Tran Gia
+    orcid: "https://orcid.org/0009-0002-3085-1255"
+  - family-names: Kha
+    given-names: Nhan Nguyen Tran
+    orcid: "https://orcid.org/0009-0004-2709-2061"
+  - family-names: Minh
+    given-names: Thuc Nguyen
+    orcid: "https://orcid.org/0009-0000-4810-3613"
+  - family-names: Phien
+    given-names: Nguyen Ngoc
+    orcid: "https://orcid.org/0000-0001-9152-6208"
+license: MIT
+version: "1.0.0"
+date-released: "2026-09-29"

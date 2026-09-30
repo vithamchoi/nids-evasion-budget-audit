@@ -1,0 +1,53 @@
+{
+  "title": "Artifact for: NIDS evasion under a correctly bounded budget",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "description": "Result files, experiment scripts and LaTeX generators for the paper. Every table, figure and inline number in the paper is computed from results/ by the scripts in latex/.",
+  "creators": [
+    {
+      "name": "Ha, Son X.",
+      "orcid": "0000-0002-5336-0566"
+    },
+    {
+      "name": "Tran-Truong, Phat T.",
+      "orcid": "0000-0003-3199-6333"
+    },
+    {
+      "name": "Le, Xuan-Bach",
+      "orcid": "0009-0003-6848-5403"
+    },
+    {
+      "name": "Huong, Luong Hoang",
+      "orcid": "0000-0002-0398-5090"
+    },
+    {
+      "name": "Nguyen, Tung Q.",
+      "orcid": "0009-0003-5046-5535"
+    },
+    {
+      "name": "Huy, Tran Gia",
+      "orcid": "0009-0002-3085-1255"
+    },
+    {
+      "name": "Kha, Nhan Nguyen Tran",
+      "orcid": "0009-0004-2709-2061"
+    },
+    {
+      "name": "Minh, Thuc Nguyen",
+      "orcid": "0009-0000-4810-3613"
+    },
+    {
+      "name": "Phien, Nguyen Ngoc",
+      "orcid": "0000-0001-9152-6208"
+    }
+  ],
+  "keywords": [
+    "network intrusion detection",
+    "adversarial evasion",
+    "perturbation budget",
+    "calibration",
+    "query budget",
+    "negative result"
+  ]
+}

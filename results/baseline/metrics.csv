@@ -1,0 +1,2 @@
+Model,Accuracy,Precision,Recall,F1_Score,Train_Samples,Test_Samples
+RandomForest,0.99825,0.9974463738508682,0.9936402950903078,0.9955396966993756,80000,20000

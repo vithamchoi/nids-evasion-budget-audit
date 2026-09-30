@@ -1,0 +1,19 @@
+{
+  "train_rows": 50000,
+  "test_rows": 702718,
+  "test_accuracy_pct": 70.474,
+  "top10_features": [
+    "Max Packet Length",
+    "Min Packet Length",
+    "Bwd Packet Length Max",
+    "Average Packet Size",
+    "Packet Length Mean",
+    "Flow Bytes/s",
+    "Init_Win_bytes_backward",
+    "Init_Win_bytes_forward",
+    "Fwd Header Length.1",
+    "Avg Fwd Segment Size"
+  ],
+  "v6_overlap_reproduced": 0,
+  "v6_n": 107
+}

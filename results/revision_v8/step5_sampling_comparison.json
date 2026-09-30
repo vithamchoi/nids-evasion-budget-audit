@@ -1,0 +1,39 @@
+{
+  "N_per_arm": 50,
+  "top10": [
+    "Max Packet Length",
+    "Min Packet Length",
+    "Bwd Packet Length Max",
+    "Average Packet Size",
+    "Packet Length Mean",
+    "Flow Bytes/s",
+    "Init_Win_bytes_backward",
+    "Init_Win_bytes_forward",
+    "Fwd Header Length.1",
+    "Avg Fwd Segment Size"
+  ],
+  "stratified": {
+    "greedy": {
+      "ESR": 0.0,
+      "CI": [
+        0.0,
+        7.1
+      ],
+      "mean_dP": -0.0305,
+      "mean_queries": 20.0
+    },
+    "elapsed_s": 28.3
+  },
+  "uniform": {
+    "greedy": {
+      "ESR": 0.0,
+      "CI": [
+        0.0,
+        7.1
+      ],
+      "mean_dP": -0.0359,
+      "mean_queries": 20.0
+    },
+    "elapsed_s": 17.5
+  }
+}

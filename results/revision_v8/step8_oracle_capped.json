@@ -1,0 +1,3934 @@
+{
+  "config": {
+    "oracle_budget": 20,
+    "tau": 0.5,
+    "features": [
+      "Max Packet Length",
+      "Min Packet Length",
+      "Bwd Packet Length Max",
+      "Average Packet Size",
+      "Packet Length Mean",
+      "Flow Bytes/s",
+      "Init_Win_bytes_backward",
+      "Init_Win_bytes_forward",
+      "Fwd Header Length.1",
+      "Avg Fwd Segment Size"
+    ]
+  },
+  "arms": {
+    "greedy": {
+      "evaded": 0,
+      "n": 107,
+      "ESR": 0.0,
+      "CI": [
+        0.0,
+        3.4
+      ],
+      "mean_dP": -0.036,
+      "mean_oracle_calls": 20.0,
+      "max_oracle_calls": 20
+    },
+    "random_k": {
+      "evaded": 0,
+      "n": 107,
+      "ESR": 0.0,
+      "CI": [
+        0.0,
+        3.4
+      ],
+      "mean_dP": -0.0364,
+      "mean_oracle_calls": 20.0,
+      "max_oracle_calls": 20
+    },
+    "nes8": {
+      "evaded": 0,
+      "n": 107,
+      "ESR": 0.0,
+      "CI": [
+        0.0,
+        3.4
+      ],
+      "mean_dP": -0.0031,
+      "mean_oracle_calls": 20.0,
+      "max_oracle_calls": 20
+    },
+    "nes4": {
+      "evaded": 0,
+      "n": 107,
+      "ESR": 0.0,
+      "CI": [
+        0.0,
+        3.4
+      ],
+      "mean_dP": -0.0054,
+      "mean_oracle_calls": 20.0,
+      "max_oracle_calls": 20
+    },
+    "nes2": {
+      "evaded": 0,
+      "n": 107,
+      "ESR": 0.0,
+      "CI": [
+        0.0,
+        3.4
+      ],
+      "mean_dP": -0.0101,
+      "mean_oracle_calls": 20.0,
+      "max_oracle_calls": 20
+    }
+  },
+  "raw": [
+    {
+      "id": 276566,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 289294,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 284510,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 229245,
+      "p_orig": 0.83,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 333596,
+      "p_orig": 0.83,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 370961,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 314705,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": -0.05,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.06,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 323300,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 259007,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 284381,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 274333,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.8,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.8,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 316095,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 283735,
+      "p_orig": 0.86,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.05,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.8,
+        "delta": -0.06,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.86,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.85,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.86,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 228126,
+      "p_orig": 0.81,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": -0.05,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.75,
+        "delta": -0.06,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.03,
+        "calls": 20
+      }
+    },
+    {
+      "id": 333965,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 296550,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 288812,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 332660,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.8,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.8,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 248614,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": -0.05,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.06,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.03,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.02,
+        "calls": 20
+      }
+    },
+    {
+      "id": 342469,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 297837,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 341643,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 240002,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 323177,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 351629,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 351989,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 283908,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 229332,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": -0.05,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.06,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.02,
+        "calls": 20
+      }
+    },
+    {
+      "id": 350461,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 359643,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 314244,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 315123,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      }
+    },
+    {
+      "id": 324978,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 284535,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 371021,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 324097,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 221326,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.8,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.8,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      }
+    },
+    {
+      "id": 332684,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 284290,
+      "p_orig": 0.85,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.85,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.85,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.85,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 350511,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 297437,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": -0.05,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.06,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.02,
+        "calls": 20
+      }
+    },
+    {
+      "id": 256659,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 229143,
+      "p_orig": 0.83,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.05,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.77,
+        "delta": -0.06,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 333638,
+      "p_orig": 0.83,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 333193,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 247568,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 274959,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.77,
+        "delta": -0.07,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": -0.08,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": -0.05,
+        "calls": 20
+      }
+    },
+    {
+      "id": 238262,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 229614,
+      "p_orig": 0.82,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.81,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.82,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 342010,
+      "p_orig": 0.84,
+      "stratum": "High(>0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.83,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.84,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 300391,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6195,
+        "delta": -0.1096,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6195,
+        "delta": -0.1096,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7191,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6791,
+        "delta": -0.05,
+        "calls": 20
+      }
+    },
+    {
+      "id": 285249,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 352031,
+      "p_orig": 0.7191,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6195,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6195,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.6595,
+        "delta": -0.0596,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6595,
+        "delta": -0.0596,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6595,
+        "delta": -0.0596,
+        "calls": 20
+      }
+    },
+    {
+      "id": 354494,
+      "p_orig": 0.7496,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.71,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.71,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7496,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7496,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7496,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 323122,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 275897,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      }
+    },
+    {
+      "id": 258780,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.6991,
+        "delta": -0.03,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7091,
+        "delta": -0.02,
+        "calls": 20
+      }
+    },
+    {
+      "id": 266940,
+      "p_orig": 0.79,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 387174,
+      "p_orig": 0.7191,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0896,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0896,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.6891,
+        "delta": -0.03,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6891,
+        "delta": -0.03,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0896,
+        "calls": 20
+      }
+    },
+    {
+      "id": 281510,
+      "p_orig": 0.71,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.69,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.71,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.71,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.71,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 342184,
+      "p_orig": 0.6796,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.64,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.64,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.6796,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6796,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6796,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 210735,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 301100,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.69,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      }
+    },
+    {
+      "id": 342756,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      }
+    },
+    {
+      "id": 342153,
+      "p_orig": 0.74,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.73,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.73,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.74,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.74,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.74,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 247867,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 318989,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6895,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 221056,
+      "p_orig": 0.7296,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.69,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.69,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7296,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7296,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7296,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 285223,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6087,
+        "delta": -0.1205,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6087,
+        "delta": -0.1205,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6883,
+        "delta": -0.0409,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6387,
+        "delta": -0.0905,
+        "calls": 20
+      }
+    },
+    {
+      "id": 315581,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7091,
+        "delta": -0.02,
+        "calls": 20
+      }
+    },
+    {
+      "id": 308115,
+      "p_orig": 0.7191,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6695,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6795,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7191,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7191,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7191,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 340623,
+      "p_orig": 0.7391,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.1096,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.1096,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.6795,
+        "delta": -0.0596,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6891,
+        "delta": -0.05,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6395,
+        "delta": -0.0996,
+        "calls": 20
+      }
+    },
+    {
+      "id": 301494,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6395,
+        "delta": -0.0896,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6895,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6895,
+        "delta": -0.0396,
+        "calls": 20
+      }
+    },
+    {
+      "id": 254933,
+      "p_orig": 0.7491,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7095,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7095,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7491,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7491,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7491,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 215274,
+      "p_orig": 0.7196,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.68,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.68,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 229805,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 281011,
+      "p_orig": 0.7096,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.67,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.67,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7096,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7096,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7096,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 351019,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6895,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6895,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6895,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 344805,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.69,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7296,
+        "delta": -0.01,
+        "calls": 20
+      }
+    },
+    {
+      "id": 229796,
+      "p_orig": 0.7196,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.67,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.67,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6996,
+        "delta": -0.02,
+        "calls": 20
+      }
+    },
+    {
+      "id": 299704,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 244652,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      }
+    },
+    {
+      "id": 327076,
+      "p_orig": 0.7196,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.68,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.68,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 220061,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 343669,
+      "p_orig": 0.7491,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7095,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7095,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7491,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7095,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7095,
+        "delta": -0.0396,
+        "calls": 20
+      }
+    },
+    {
+      "id": 284178,
+      "p_orig": 0.76,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 291418,
+      "p_orig": 0.7196,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.67,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.67,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 354666,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6895,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6895,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 214531,
+      "p_orig": 0.7191,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6795,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6795,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7191,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7191,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7191,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 301125,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 226179,
+      "p_orig": 0.7196,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.67,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.67,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7196,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 317771,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6087,
+        "delta": -0.1205,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6087,
+        "delta": -0.1205,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6883,
+        "delta": -0.0409,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6683,
+        "delta": -0.0609,
+        "calls": 20
+      }
+    },
+    {
+      "id": 343864,
+      "p_orig": 0.7296,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.69,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.69,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7296,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7296,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7296,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 305429,
+      "p_orig": 0.79,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.78,
+        "delta": -0.01,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.79,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 248867,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6295,
+        "delta": -0.0996,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7091,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7091,
+        "delta": -0.02,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6991,
+        "delta": -0.03,
+        "calls": 20
+      }
+    },
+    {
+      "id": 214984,
+      "p_orig": 0.7391,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6995,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6995,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7391,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.6995,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7391,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 254885,
+      "p_orig": 0.7291,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.6395,
+        "delta": -0.0896,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.6395,
+        "delta": -0.0896,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7291,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.6895,
+        "delta": -0.0396,
+        "calls": 20
+      }
+    },
+    {
+      "id": 299950,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 383225,
+      "p_orig": 0.7396,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.7,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.7396,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 240138,
+      "p_orig": 0.76,
+      "stratum": "Medium(0.6 - 0.8)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.72,
+        "delta": -0.04,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.71,
+        "delta": -0.05,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.76,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 373490,
+      "p_orig": 0.5769,
+      "stratum": "Boundary(0.5 - 0.6)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.5373,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.5373,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.5769,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.5769,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.5473,
+        "delta": -0.0296,
+        "calls": 20
+      }
+    },
+    {
+      "id": 262756,
+      "p_orig": 0.5869,
+      "stratum": "Boundary(0.5 - 0.6)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.5373,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.5373,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.5869,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.5869,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.5869,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 267135,
+      "p_orig": 0.5769,
+      "stratum": "Boundary(0.5 - 0.6)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.5373,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.5373,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.5769,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.5769,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.5669,
+        "delta": -0.01,
+        "calls": 20
+      }
+    },
+    {
+      "id": 288504,
+      "p_orig": 0.5969,
+      "stratum": "Boundary(0.5 - 0.6)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.5673,
+        "delta": -0.0296,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.5673,
+        "delta": -0.0296,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.5969,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.5969,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.5969,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 341448,
+      "p_orig": 0.5869,
+      "stratum": "Boundary(0.5 - 0.6)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.5373,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.5373,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.5869,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.5869,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.5869,
+        "delta": 0.0,
+        "calls": 20
+      }
+    },
+    {
+      "id": 292542,
+      "p_orig": 0.5569,
+      "stratum": "Boundary(0.5 - 0.6)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.5073,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.5073,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.5569,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.5173,
+        "delta": -0.0396,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.5173,
+        "delta": -0.0396,
+        "calls": 20
+      }
+    },
+    {
+      "id": 381698,
+      "p_orig": 0.5856,
+      "stratum": "Boundary(0.5 - 0.6)",
+      "type": "DDoS",
+      "greedy": {
+        "evaded": false,
+        "prob": 0.526,
+        "delta": -0.0596,
+        "calls": 20
+      },
+      "random_k": {
+        "evaded": false,
+        "prob": 0.536,
+        "delta": -0.0496,
+        "calls": 20
+      },
+      "nes8": {
+        "evaded": false,
+        "prob": 0.5856,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes4": {
+        "evaded": false,
+        "prob": 0.5856,
+        "delta": 0.0,
+        "calls": 20
+      },
+      "nes2": {
+        "evaded": false,
+        "prob": 0.5756,
+        "delta": -0.01,
+        "calls": 20
+      }
+    }
+  ]
+}

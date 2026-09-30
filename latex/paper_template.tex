@@ -1,0 +1,1020 @@
+%% ---------------------------------------------------------------------------
+%% Can a Language Model Fool an Intrusion Detector?
+%% Computers & Security (Elsevier) -- elsarticle, journal two-column layout
+%%
+%% DO NOT EDIT main.tex. Edit THIS file, then run:
+%%     python3 build.py ../results
+%%     pdflatex main && bibtex main && pdflatex main && pdflatex main
+%%
+%% Every number in the tables, in the figures, and in the \newcommand macros is
+%% read from ../results/revision_v8/*.json by make_tables.py / make_figures.py.
+%% ---------------------------------------------------------------------------
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage[htt]{hyphenat}
+%% OT1 thay vi T1: Computer Modern ma hoa T1 (ec) chi co ban bitmap
+%% Metafont tren he nay, sinh ra chu Type 3 nhoe trong PDF. OT1 da co
+%% san ban Type 1 vector. T5 (tieng Viet) dung VNR, cung la Type 1.
+\usepackage[T5,OT1]{fontenc}   % T1 stays the default; T5 only for Vietnamese names
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%% Ngat dong: ten file va dinh danh dai trong \texttt la mot token lien,
+%% khong co cho ngat nen bi day ra ngoai le cot.
+\sloppy
+\emergencystretch=3em
+\tolerance=2000
+
+\usepackage{array}
+\usepackage{url}
+
+\biboptions{authoryear}
+\journal{IEEE Transactions on Network and Service Management}
+
+\renewcommand{\figurename}{Fig.}
+
+%% Vietnamese-safe name macro.
+\newcommand{\vn}[1]{{\fontencoding{T5}\selectfont #1}}
+
+%% Placeholder for a hand-drawn diagram. As soon as figures/<name>.pdf exists it
+%% is included; until then a labelled empty frame is drawn in its place.
+\newcommand{\pendingfig}[2]{%
+  \IfFileExists{figures/#1.pdf}%
+    {\includegraphics[width=\linewidth]{figures/#1.pdf}}%
+    {\fbox{\parbox[c][#2][c]{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}%
+       {\centering\sffamily\small
+        [\,\texttt{\detokenize{figures/#1.pdf}}\,]\par\vspace{3pt}
+        \footnotesize hand-drawn diagram --- drop the PDF in
+        \texttt{figures/} under this exact name\par}}}}
+
+%%MACROS%%
+
+\usepackage{orcidlink}
+\begin{document}
+
+\begin{frontmatter}
+
+\title{The Budget Was Never Enforced: A Reported 33\% Evasion Rate Against a
+Random-Forest NIDS Falls to Zero Under a Correctly Bounded Perturbation}
+
+\author[rmit]{Son X. Ha\,\orcidlink{0000-0002-5336-0566}}
+\ead{ha.son@rmit.edu.vn}
+\author[hcmut]{Phat T. Tran-Truong\,\orcidlink{0000-0003-3199-6333}\fnref{js}}
+\ead{phatttt@hcmut.edu.vn}
+\author[hcmut]{Xuan-Bach Le\,\orcidlink{0009-0003-6848-5403}\fnref{js}}
+\ead{lexuanbach@hcmut.edu.vn}
+\author[fptct]{Luong Hoang Huong\,\orcidlink{0000-0002-0398-5090}}
+\ead{huonghoangluong@gmail.com}
+\author[fpt]{Tung Q. Nguyen\,\orcidlink{0009-0003-5046-5535}}
+\ead{NguyenQuangTung0902@gmail.com}
+\author[fptct]{Tran Gia Huy\,\orcidlink{0009-0002-3085-1255}}
+\ead{trangiahuyh26@gmail.com}
+\author[fptct]{Nhan Nguyen Tran Kha\,\orcidlink{0009-0004-2709-2061}}
+\ead{NhanNTKCE200304@gmail.com}
+\author[fptct]{Thuc Nguyen Minh\,\orcidlink{0009-0000-4810-3613}}
+\ead{ThucNMCE200458@gmail.com}
+\author[tdtu1,tdtu2]{Nguyen Ngoc Phien\,\orcidlink{0000-0001-9152-6208}\corref{cor}}
+\ead{nguyenngocphien@tdtu.edu.vn}
+
+\cortext[cor]{Corresponding author.}
+\fntext[js]{P. T. Tran-Truong and X.-B. Le contributed equally to this work and are joint second authors.}
+
+%% Keep affiliation values plain ASCII on one line: elsarticle parses them as
+%% key/value options and a font-switching macro inside a value breaks it.
+\affiliation[hcmut]{organization={Faculty of Computer Science and Engineering, Ho Chi Minh City University of Technology (HCMUT), VNU-HCM}, city={Ho Chi Minh City}, country={Vietnam}}
+\affiliation[rmit]{organization={The Business School, RMIT University}, city={Ho Chi Minh City}, country={Vietnam}}
+\affiliation[fpt]{organization={FPT University, Ho Chi Minh City Campus}, city={Ho Chi Minh City}, country={Vietnam}}
+\affiliation[fptct]{organization={FPT University, Can Tho Campus}, city={Can Tho}, country={Vietnam}}
+\affiliation[tdtu1]{organization={Center for Applied Information Technology \& Faculty of Information Technology, Ton Duc Thang University}, city={Ho Chi Minh City}, country={Vietnam}}
+\affiliation[tdtu2]{organization={Faculty of Information Technology, Ton Duc Thang University}, city={Ho Chi Minh City}, country={Vietnam}}
+
+\begin{abstract}
+Network intrusion detectors that expose confidence scores give an attacker a
+search signal, and a growing literature asks whether a language model exploits
+it better than classical black-box optimisers. We reported such a result: an
+LLM-guided search evading \LLMevaded/\Ntotal\ CICIDS2017 DDoS flows,
+$\LLMesr$\%, against $\GREesr$\% for greedy coordinate descent. This paper
+withdraws it.
+
+The per-feature budget was enforced against the \emph{current} perturbed vector
+rather than the original flow, so each iteration could move a further
+$\pm\budgetpct$\% from wherever the search had already reached. Over
+$K=\Kbudget$ iterations the reachable set is not a box around the flow; it is
+unbounded in practice.
+
+Re-enforcing the budget against the original vector, every strategy evades
+$\CGreedyEv$ of \CN\ flows: a one-call corner query, greedy, random-$K$, and NES
+at three population sizes, all at $0.0$\% with an exact upper bound of
+$\CCPhi$\%. The LLM arm evades $\CLlmEv$ of \CLlmN\ and moves the score less
+than a single corner query does.
+
+What does decide evasion is the perturbation magnitude and the cohort. Sweeping
+the magnitude, nothing succeeds below $\CEpsFirst$\%, and $10$\% success needs
+$\CEpsTen$\%. Within a budget the attack subtracts a near-constant amount from
+the score: median $\XShiftMed$, SD $\XShiftSd$ at $\varepsilon=100$\% --- so
+a flow evades essentially when its unperturbed probability lies below
+$\XThr$, a rule correct for $\XRuleOk$ of \CN\ flows. Evasion rate by
+confidence stratum is therefore $\XEsrBnd$\%, $\XEsrMed$\% and $\XEsrHi$\%,
+and the pooled $\CEsrG$\% is a weighted average whose weights are our sampling
+choice rather than a property of the attack.
+
+\end{abstract}
+
+\begin{keyword}
+Network intrusion detection \sep Adversarial machine learning \sep
+Black-box evasion \sep Large language models \sep CICIDS2017 \sep
+Query budget \sep Probability calibration
+\end{keyword}
+
+\end{frontmatter}
+
+%% ===========================================================================
+\section{Introduction}
+\label{sec:intro}
+
+A network intrusion detector that returns a confidence score rather than a bare
+label hands an attacker a search signal. The attacker perturbs the flow, reads
+the score, and repeats. Whether that search is worth defending against depends
+on two quantities that are easy to confuse: how good the search strategy is, and
+how much perturbation the attacker is allowed.
+
+This paper is about confusing them. An earlier version of this work reported
+that an LLM-guided search evaded \LLMevaded\ of \Ntotal\ DDoS flows,
+$\LLMesr$\%, while greedy coordinate descent managed $\GREesr$\% and NES
+$\NESesr$\%, and concluded that a language model uses the score signal more
+efficiently than a classical optimiser. The conclusion does not survive a
+correct budget.
+
+\paragraph{The fault.} Each strategy was capped at $\pm\budgetpct$\% per
+feature. That cap was applied to the \emph{current} vector at every iteration
+rather than to the original flow, so an iteration could move a further
+$\pm\budgetpct$\% from wherever the search had already arrived. The reachable
+set is then multiplicative in the iteration count, not a fixed box: after
+$K=\Kbudget$ iterations a feature can reach $1.1^{\Kbudget} \approx 6.7$ times
+its original value, or $0.9^{\Kbudget} \approx 0.12$ times it. The strategy that
+iterated most productively was rewarded with the largest budget, which is the
+comparison the paper thought it was controlling for.
+
+\paragraph{The repair.} We re-ran every arm with the box computed once from the
+original flow and held fixed. Under that constraint nothing works. A one-call
+corner query, greedy coordinate descent, random-$K$ perturbation, NES at three
+population sizes, and the LLM all evade zero flows.
+
+\paragraph{What is left.} A null result on strategies is still a result about
+budgets, and the useful question becomes how much perturbation evasion actually
+requires. We sweep it, and find a threshold: no strategy evades anything below
+$\CEpsFirst$\%, and reaching a $10$\% success rate takes $\CEpsTen$\%. The
+quantity a defender should care about is the size of the perturbation the
+feature representation permits, not which optimiser is searching inside it.
+
+\paragraph{Findings}
+\begin{enumerate}
+\item \textbf{The published comparison measured budget, not strategy.} The
+per-feature cap was applied to the current vector rather than the original one
+(Section~\ref{sec:bug}).
+\item \textbf{Under a fixed box, every strategy evades nothing.}
+$\CGreedyEv/\CN$ for all six non-LLM arms, exact upper bound $\CCPhi$\%
+(Section~\ref{sec:corrected}).
+\item \textbf{The language model is not better, and is worse per call.} On the
+\CSubN\ flows it ran, mean $\Delta P$ is $\CSubLlmDp$ at \CLlmCalls\ oracle
+calls, against $\CSubCornerDp$ for a single corner query
+(Section~\ref{sec:corrected}).
+\item \textbf{Perturbation magnitude is the variable that matters.} ESR is
+$\CEsrB$\% at $10$\%, $\CEsrC$\% at $15$\%, $\CEsrE$\% at $30$\% and
+$\CEsrF$\% at $50$\% (Section~\ref{sec:sweep2}).
+\end{enumerate}
+
+
+%% ===========================================================================
+\section{Related work and threat-model position}
+\label{sec:related}
+
+\subsection{Feature space versus problem space}
+Adversarial evasion of network detectors is studied in two regimes. In the
+\emph{feature space} an attacker edits the numeric vector the classifier
+consumes; in the \emph{problem space} the attacker must emit packets that a real
+capture pipeline turns into that vector \citep{pierazzi2020problemspace}. The
+gap between them is not cosmetic. Many CICIDS2017 features are aggregates
+(\texttt{Flow Bytes/s}, \texttt{Packet Length Mean}) whose value is a
+consequence of many packet-level choices, and some are effectively
+uncontrollable by the sender.
+
+This paper is deliberately a feature-space study, and we treat its results as an
+\emph{upper bound} on what a problem-space attacker could achieve, in the sense
+of \citet{apruzzese2022modeling}. We do not claim packet-level realisability
+and we do not present a mapping from perturbed features to a traffic generator;
+Section~\ref{sec:limitations} states this plainly.
+
+\subsection{Score-based black-box optimisation}
+\citet{papernot2017practical} established the substitute-model route to
+black-box attacks; \citet{ilyas2018nes} and \citet{chen2017zoo} established the
+score-based route, estimating gradients from finite differences of the returned
+confidence. \citet{guo2019simba} showed that simple coordinate search is a
+strong baseline in the image domain. All of these assume, implicitly, that the
+score surface carries local gradient information. Our NES result
+(Section~\ref{sec:corrected}) is a direct measurement of what happens when it
+does not.
+
+\subsection{Threat model}
+\label{sec:threat}
+We assume a \emph{feature-aware gray-box} adversary: it knows the identity of
+the ten features it may perturb, it can query the detector and read the
+continuous probability it returns, and it is limited to $K=\Kbudget$ queries per
+flow and $\pm\budgetpct$\% of each feature's original value. It does not know the
+model parameters, the training data, or the deployed threshold.
+
+This is a strong assumption and we do not defend it as typical. It corresponds
+to an insider, a red-team engagement with SOC telemetry access, or a service
+that returns risk scores through an API. Section~\ref{sec:limitations} discusses
+how the results should be read when only hard labels are exposed.
+
+
+\subsection{Adversarial machine learning, from feature space to problem space}
+
+The evasion problem was posed for security classifiers by
+Biggio et al.~\citep{biggio2013evasion} and, independently, for neural networks by
+Szegedy et al.~\citep{szegedy2014intriguing} and Goodfellow et
+al.~\citep{goodfellow2015explaining}; Carlini and
+Wagner~\citep{carlini2017towards} established the optimisation baselines and
+Biggio and Roli~\citep{biggio2018wild} give the retrospective. Black-box variants
+matter here because a network attacker has no gradients: transfer
+attacks~\citep{papernot2017practical}, zeroth-order
+estimation~\citep{chen2017zoo}, and decision-based
+search~\citep{brendel2018decision} are the three families, and the score-based
+baseline we compare against is an instance of the second.
+
+The distinction that governs our threat model is Pierazzi et al.'s separation of
+feature space from problem space~\citep{pierazzi2020problemspace}: a perturbation
+that is small in feature space may correspond to no realisable packet sequence
+at all. Our budget constraint exists to keep the search inside the realisable
+region, and is why we report per-stratum results rather than an unconstrained
+success rate.
+
+\subsection{Evasion against network intrusion detection specifically}
+
+Corona et al.~\citep{corona2013adversarial} give the taxonomy for IDS-specific
+attacks. Apruzzese and colleagues~\citep{apruzzese2019addressing,
+apruzzese2022modeling} argue at length that most published NIDS evasion results
+assume an attacker who can modify features that no real attacker
+controls, and propose realism constraints of the kind we adopt. Sheatsley et
+al.~\citep{sheatsley2022adversarial} study the same question for
+network-flow classifiers.
+
+Behind all of it sits Sommer and Paxson's
+critique~\citep{sommer2010outside} of machine learning for intrusion detection ---
+that the base rate, the cost of false positives, and the semantic gap make the
+problem unlike the ones ML usually succeeds at --- and the more recent
+methodological catalogue of Arp et al.~\citep{arp2022dosdonts}, whose pitfalls
+(sampling bias, spurious correlations, inappropriate baselines, lab-only
+evaluation) we use as a checklist in Section~\ref{sec:limitations}.
+Pendlebury et al.~\citep{pendlebury2019tesseract} make the temporal version of the
+same argument.
+
+\subsection{The dataset, and its known defects}
+
+CICIDS2017~\citep{sharafaldin2018cicids} is the standard benchmark for this task
+and it has documented problems. Engelen et
+al.~\citep{engelen2021troubleshooting} found labelling and flow-construction
+errors, and Lanvin et al.~\citep{lanvin2022errors} showed that correcting them
+changes reported detection performance materially. We state which subset we use
+and report the composition of our cohort explicitly, because the aggregate
+statistics of this dataset are not a safe summary.
+
+\subsection{Why the detector's calibration matters to the attacker}
+
+The attacker in our threat model reads a score, not a label. Whether that score
+behaves like a probability therefore determines whether a budgeted search can
+make progress. Random forests~\citep{breiman2001randomforests} are not calibrated
+by construction; Niculescu-Mizil and Caruana~\citep{niculescu2005predicting}
+document the characteristic distortion and
+Platt scaling~\citep{platt1999probabilistic} is the standard remedy, with
+Guo et al.~\citep{guo2017calibration} extending the analysis to modern models. We
+report the detector's calibration so that the evasion results can be read as a
+property of the score surface rather than of an arbitrary threshold.
+
+\subsection{Language models as attackers}
+
+Using a language model to drive an attack loop is now an established pattern,
+from penetration testing~\citep{deng2024pentestgpt} onward. The question our
+experiment asks is narrower and, we think, more useful: given the same query
+budget and the same realism constraints, does an LLM-driven search beat a plain
+score-guided one? Framing it that way makes the comparison a controlled one, and
+places the result in the taxonomy of NIST AI 100-2~\citep{vassilev2023aml}.
+Proportions carry exact Clopper--Pearson intervals~\citep{clopper1934ci}, and
+paired comparisons use the Wilcoxon signed-rank test~\citep{wilcoxon1945}.
+
+%% ===========================================================================
+\section{Experimental setup}
+\label{sec:setup}
+
+\begin{figure}[t]
+\centering
+\pendingfig{fig_threat_model}{46mm}
+\caption{\textbf{(A)} The per-feature cap was applied to the current vector
+rather than the original flow, so the reachable set compounds with the
+iteration count instead of staying inside a fixed box. \textbf{(B)} With the
+box fixed, every strategy evades nothing; what moves the rate is the
+perturbation budget, not the search.}
+\label{fig:threatmodel}
+\end{figure}
+
+\subsection{Dataset and temporal split}
+We use CICIDS2017 \citep{sharafaldin2018cicids}. The detector is trained on
+\trainrows\ flows and evaluated on the held-out Friday partition of
+\testrows\ flows, which is disjoint in time from the training window. Under this
+temporal split the detector's accuracy on the test partition is \testacc\%,
+substantially below the in-distribution figure reported in
+Table~\ref{tab:baseline}; the drop is the concept drift a deployed NIDS actually
+experiences, and evaluating an attack against the optimistic number would
+overstate the defence.
+
+The detector is a Random Forest with \RFtrees{} trees, minimum samples per split
+\RFsplit{}, balanced class weights and \texttt{random\_state} = \RFseed{}; all
+other scikit-learn defaults apply. Non-finite feature values are replaced by
+zero and no scaling is applied, which a forest does not require. Three features
+are discrete by nature (\texttt{Destination Port}, \texttt{Source Port},
+\texttt{Protocol}) and are excluded from the manipulable set for that reason, so
+every feature the attacker may move is continuous and the $\pm\budgetpct$\% box
+needs no rounding or type repair.
+
+\begin{table}[t]
+\caption{Baseline Random-Forest detector, in-distribution evaluation.
+Generated from \texttt{../baseline/metrics.csv}.}
+\label{tab:baseline}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrcccc}
+\toprule
+Model & Train & Test & Acc. & Prec. & Rec. & F1 \\
+\midrule
+%%ROWS:tab_baseline%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Cohort construction}
+The attack cohort is drawn from the Friday flows that the detector correctly
+classifies as attacks. Selection is stratified by the detector's original
+probability into high ($p_{\text{orig}}>0.8$), medium
+($0.6 \le p_{\text{orig}} \le 0.8$) and boundary
+($0.5 \le p_{\text{orig}} < 0.6$), with a cap of \Nperstratum{} flows per
+stratum drawn without replacement at a fixed seed. The high and medium strata
+fill the cap; the boundary stratum is exhausted at $n=\Sboundn$, which is every
+boundary flow available. The cohort is therefore $\Shighn/\Smedn/\Sboundn$,
+$N=\Ntotal$ in total, all DDoS, with mean original probability \porig.
+
+This design has a consequence that governs how the pooled numbers may be read,
+and we state it before reporting them. \textbf{The cohort is weighted by design,
+not by prevalence.} Equal-size strata were chosen so that the boundary and
+medium regions, where evasion is possible at all, are estimated with usable
+precision rather than swamped by the high-confidence mass that dominates the
+population. That is the right design for the question this paper asks, but it
+means any pooled rate is a rate \emph{on this cohort}, not an estimate of the
+rate an attacker would see against the Friday traffic as a whole. Recovering the
+latter needs the stratum prevalences in the population, which this run did not
+record. No arm evades anything on this cohort once the
+budget is enforced, so no pooled rate is at issue; what the design still governs
+is the perturbation sweep of Section~\ref{sec:sweep2}, whose thresholds are
+thresholds on this cohort and not on Friday traffic as a whole.
+
+Attacking only true positives is the right choice: evading a flow the
+detector already misses is not an attack --- but it makes the cohort small and
+single-family, which Section~\ref{sec:limitations} treats as the principal
+limitation of this study.
+
+\subsection{Manipulable features}
+The adversary may perturb the ten features of highest importance to the trained
+forest, listed in Table~\ref{tab:features}. Each may move by at most
+$\pm\budgetpct$\% of its original value; the server clips any request that
+exceeds the budget before scoring.
+
+\begin{table}[t]
+\caption{The ten manipulable features, by Random-Forest importance.
+Generated from \texttt{step6\_merged\_results.json}.}
+\label{tab:features}
+\centering
+\footnotesize
+\begin{tabular}{ll}
+\toprule
+%%ROWS:tab_features%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Attack strategies}
+Four strategies are compared under identical budgets.
+
+\emph{LLM-guided iterative search.} The attacker is \LLMmodel, a small
+instruction-tuned model served over a hosted API, sampled at temperature
+\LLMtemp{} with no \texttt{top\_p}, seed or penalty set, so the run is not
+deterministic. It is given the ten feature names and their current values as
+JSON and must answer in JSON; no natural-language parser is involved. The system
+prompt and the two user templates are reproduced verbatim:
+
+\begin{quote}\footnotesize\ttfamily\raggedright
+system: You are an expert cybersecurity attacker AI.\\
+Output raw JSON only.\\[4pt]
+user: Modify features to evade NIDS (P(Attack)<0.5).\\
+Max $\pm$10\% per feature. Non-negative. JSON only.\\
+\{features as JSON\}\\[4pt]
+follow-up: Still ATTACK P=\{p\}. Propose new JSON:\\
+\{previous proposal\}
+\end{quote}
+
+\noindent
+Every returned object is clipped to the budget box server-side before it reaches
+the detector, so an out-of-budget proposal is silently projected rather than
+rejected; a reply that does not parse as JSON is discarded. The search stops on
+success, or after \Patience{} consecutive steps that neither parse nor improve
+the best probability seen so far. In the corrected run the patience rule was removed, so the arm
+spends its full allowance or stops on success; \CLlmCalls{} calls per flow is
+therefore a measurement of the search and not of when the model gave up.
+
+\emph{Greedy coordinate (1-D).} At each step, probe one feature at
+$\pm\budgetpct$\% and keep the direction that lowers the score. One step costs
+three oracle calls: the incumbent and the two candidates.
+
+\emph{Random-$K$.} Sample $K$ perturbation vectors uniformly inside the budget
+box and keep the best. One step costs one oracle call.
+
+\emph{NES.} Estimate the gradient of the returned probability by antithetic
+Gaussian sampling \citep{ilyas2018nes} and take a step along it. The population
+is $n_{\text{perturb}} = \NESpop$, the sampling scale is $\sigma = \NESsigma$
+times each feature's magnitude, and the update moves each feature by
+$\NESstep \times \budgetpct$\% of its value along the sign of the estimated
+gradient. One step therefore costs $\NESpop + 1 = 9$ oracle calls. We did not
+tune these values, and Section~\ref{sec:limitations} records that as a
+limitation of the NES arm specifically.
+
+\subsection{Budget enforcement and metrics}
+\label{sec:budget}
+
+Every strategy is capped at $K=\Kbudget$ search \emph{iterations} per flow and at
+$\pm\budgetpct$\% per feature. We are explicit that the iteration cap is not an
+oracle-query cap, because the two are easy to conflate and we conflated them in
+an earlier version of this work. A single iteration costs a different number of
+calls to the detector in each strategy, so matching iterations does not match
+oracle access. Table~\ref{tab:queryaudit} gives the audited cost of the withdrawn run,
+obtained by replacing the detector call with a counting stub and running each
+loop to completion. It is reported here because it is the second thing that run
+got wrong, and because the correction is the same in kind as the one in
+Section~\ref{sec:bug}: state the constraint in the unit the attacker actually
+spends.
+
+\begin{table}[t]
+\caption{Audited oracle cost of the \emph{withdrawn} run, in which the cap was
+on iterations rather than calls. One iteration costs a different number of
+detector calls in each strategy, so matching iterations did not match oracle
+access. The corrected run caps calls directly; see
+Table~\ref{tab:corrected}.}
+\label{tab:queryaudit}
+\centering
+\footnotesize
+\begin{tabular}{lccc}
+\toprule
+Strategy & Oracle calls per iteration & Measured calls per flow & Recorded \\
+\midrule
+%%ROWS:tab_queryaudit%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+The corrected run replaces the iteration cap with an oracle-call cap, so the
+column that matters is calls and not iterations. Every arm in
+Table~\ref{tab:corrected} is held to $\CBudget$ detector calls per flow, except
+the corner query which uses $\CCornerCalls$ by construction and the LLM arm
+which averages $\CLlmCalls$. The perturbation budget is enforced by projecting
+every proposal into the box computed from the original vector, so an
+out-of-budget proposal is clipped rather than rejected and no arm can accumulate
+allowance across iterations.
+
+We report evasion success rate (ESR) at a decision threshold $\tau$, exact
+Clopper--Pearson binomial confidence intervals \citep{clopper1934ci}, the mean
+per-flow probability change $\Delta P = p_{\text{after}} - p_{\text{orig}}$, and
+the audited oracle cost. Paired comparisons between strategies use the Wilcoxon
+signed-rank test \citep{wilcoxon1945}.
+
+\subsection{Probability calibration}
+\label{sec:calibration}
+Because the attack consumes the returned probability as its search signal, we
+examined whether that probability is calibrated. The examination has three
+properties that a reader must have before the numbers, because without them the
+numbers look better than they are.
+
+\emph{It is measured on the training distribution, not on Friday.} The
+calibration fold is a \calrows-row stratified split of the \trainrows-row
+Monday--Thursday training partition. On that fold the detector is \Calacc\%
+accurate with a \Calpos\% attack rate, against \testacc\% accuracy on the Friday
+partition the attack runs on. Expected calibration error of \eceraw\ is an
+honest number for the first distribution and says nothing about the second. It
+should not be read next to \testacc\%, and an earlier version of this paper
+printed the two within a page of each other without comment.
+
+\emph{The isotonic fit is in-sample.} The regressor is fitted on the same
+\calrows\ rows on which its calibration error is then evaluated. That is why the
+post-calibration ECE is exactly \eceiso: a monotone step function fitted to a
+set reproduces that set's bin frequencies by construction. It is not evidence
+that isotonic regression would generalise, and we do not present it as such.
+
+\emph{The attack never uses it.} The detector queried during every attack
+returns the raw forest posterior, and the decision threshold $\tau=0.5$ is
+applied to that raw value. The isotonic model is fitted, stored and never
+consulted. Isotonic regression is monotone, so applying it would not reorder
+flows \citep{niculescu2005predicting}, but at a fixed rather than a
+rank-matched $\tau$ it would change which flows count as evaded, and we have not
+measured that.
+
+We keep Table~\ref{tab:calib} and Fig.~\ref{fig:calibration} because they
+describe the posterior the attack consumes on the distribution the forest was
+fitted to, and because removing a reported analysis is worse than labelling it.
+But no claim in Section~\ref{sec:corrected} depends on them, and the
+calibration of the Friday posterior: the quantity that would actually matter
+--- is not measured in this study.
+
+\begin{table}[t]
+\caption{Probability calibration on the held-out calibration split.
+Generated from \texttt{step2\_isotonic\_calibration.json}.}
+\label{tab:calib}
+\centering
+\footnotesize
+\begin{tabular}{lrcc}
+\toprule
+Posterior & Rows & ECE & Brier \\
+\midrule
+%%ROWS:tab_calib%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_calibration.pdf}
+\caption{Reliability diagram before and after isotonic recalibration. Marker
+area is proportional to $\log$ bin occupancy. The raw forest is already close to
+calibrated at the extremes and drifts in the sparse middle bins, which is where
+the attack operates. Plotted from
+\texttt{step2\_isotonic\_calibration.json}.}
+\label{fig:calibration}
+\end{figure}
+
+%% ===========================================================================
+\section{The Budget Bug}
+\label{sec:bug}
+
+Fig.~\ref{fig:threatmodel} shows the fault and its consequence side by side:
+the cap applied to the current vector rather than the original flow, and the
+reachable set that follows from it.
+
+Every strategy in the original run was capped at $K=\Kbudget$ search iterations
+and at $\pm\budgetpct$\% per feature. The second cap is the one that failed.
+
+The intended constraint is a box: for a feature with original value $x_0$, any
+perturbed value $x$ must satisfy
+$|x - x_0| \le \varepsilon |x_0|$ with $\varepsilon = \budgetpct/100$. The
+implemented constraint recomputed the box from the vector the search currently
+held. Writing $x_t$ for the value after $t$ iterations, what was enforced was
+$|x_{t+1} - x_t| \le \varepsilon |x_t|$, which gives
+\[
+|x_K| \le (1+\varepsilon)^K |x_0|,
+\]
+a bound that grows without limit in $K$ rather than staying inside the intended
+box. At $\varepsilon = 0.1$ and $K = \Kbudget$ the reachable range for a
+positive feature is $[0.12\,x_0,\ 6.73\,x_0]$, against the intended
+$[0.9\,x_0,\ 1.1\,x_0]$.
+
+The effect on the comparison is worse than the effect on any single arm. A
+strategy that moves the vector at every iteration accumulates budget; one that
+often stays put does not. The measured ranking therefore reflects how eagerly
+each strategy moved, which is exactly the confound the matched cap was meant to
+remove. We note that the arm reported as the winner was the one that proposed a
+fresh vector at every step.
+
+The same run also capped iterations rather than detector calls, which
+Table~\ref{tab:queryaudit} audits: one iteration cost one call for the LLM and
+random-$K$, three for greedy and nine for NES, so the arms were never holding
+equal oracle access either. The corrected run caps calls.
+
+A third fault was corrected in the same pass: the NES arm followed the negated
+gradient estimate, which is why its mean $\Delta P$ was reported as $\NESdp$,
+moving flows towards the detector. Both signs are now reported; the old-sign arm
+is kept in the table as \texttt{NesOld} so the two can be compared directly.
+
+%% ===========================================================================
+\section{Results Under a Fixed Box}
+\label{sec:corrected}
+
+Table~\ref{tab:corrected} re-runs every non-LLM strategy on the same \CN\ flows
+with the box computed once from the original vector. Every arm evades
+$\CGreedyEv$ flows. With no successes in \CN\ trials the exact
+Clopper--Pearson upper bound is $\CCPhi$\%, and the rule of three gives
+$\CRuleThree$\%, so the data are consistent with any true rate below roughly one
+in thirty and with none at all.
+
+\begin{table}[t]
+\caption{Every strategy under a budget enforced against the original vector.
+$n=\CN$ flows, $K=\CBudget$, $\tau=\CTau$, \CNfeat{} manipulable features.
+Intervals are exact Clopper--Pearson.}
+\label{tab:corrected}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrlrr}
+\toprule
+Strategy & $n$ & Evaded & ESR (\%) & 95\% CI & Mean $\Delta P$ & Calls \\
+\midrule
+%%ROWS:tab_corrected_arms%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+The $\Delta P$ column is the informative one. Under the fixed box the four
+search strategies are indistinguishable from each other and from a single
+query at the corner of the box: greedy reaches $\CGreedyDp$ in $\CGreedyCalls$
+calls, and the corner query reaches $\CCornerDp$ in $\CCornerCalls$. Twenty
+iterations of search buy nothing over one evaluation at the most favourable
+vertex, which is what one expects when the objective over a small box around a
+tree ensemble's input is close to monotone in each coordinate.
+
+\subsection{The language model is not the exception}
+
+The LLM arm completed \CLlmN\ of the \CN\ flows before the run ended, all from
+the high-confidence stratum, so it cannot be compared against the full-cohort
+rows above. Table~\ref{tab:subset} therefore restricts every strategy to those
+\CSubN\ flows.
+
+\begin{table}[t]
+\caption{All strategies restricted to the \CSubN{} flows the LLM arm completed.
+Model: \CLlmModel.}
+\label{tab:subset}
+\centering
+\footnotesize
+\begin{tabular}{lrrr}
+\toprule
+Strategy & Evaded & Mean $\Delta P$ & Calls \\
+\midrule
+%%ROWS:tab_corrected_subset%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+On that subset the language model evades $\CLlmEv$ flows, upper bound
+$\CLlmCPhi$\% at $n=\CLlmN$, and its mean $\Delta P$ of $\CSubLlmDp$ is the
+\emph{smallest} movement of any arm, achieved with \CLlmCalls\ detector calls
+against $\CCornerCalls$ for the corner query that reaches $\CSubCornerDp$. The
+model is not merely no better than the cheap baselines; it is worse per call.
+
+We report this at $n=\CLlmN$ and claim nothing stronger than the bound that
+sample size supports. The partial run is a limitation, not a finding, and it is
+listed as such in Section~\ref{sec:limitations}.
+
+%% ===========================================================================
+\section{What the Budget Buys}
+\label{sec:sweep2}
+
+If no strategy evades anything inside a $\budgetpct$\% box, the question worth
+asking is how large the box has to be. Table~\ref{tab:sweep2} and
+Fig.~\ref{fig:sweep2} sweep $\varepsilon$ over the same \CNsweep\ flows,
+reporting for each flow the best probability any arm reaches within that box.
+
+\begin{table}[t]
+\caption{Evasion against perturbation budget, best arm per flow, $n=\CNsweep$.}
+\label{tab:sweep2}
+\centering
+\footnotesize
+\begin{tabular}{lrrr}
+\toprule
+$\varepsilon$ & Evaded & ESR (\%) & Mean best $p$ \\
+\midrule
+%%ROWS:tab_corrected_sweep%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_budget_sweep.pdf}
+\caption{(a) Evasion rate against per-feature budget, $n=\CNsweep$ flows.
+Nothing succeeds below $\CEpsFirst$\%. (b) Distribution of the best detector
+probability reached at three budgets; the dashed line is $\tau=\CTau$.}
+\label{fig:sweep2}
+\end{figure}
+
+The curve has a threshold rather than a slope near the origin. Nothing evades at
+$5$\% or $10$\%. The first evasions appear at $\CEpsFirst$\%
+($\CEvC$ flows, $\CEsrC$\%) and the rate stays there through $20$\%. It reaches
+$\CEsrE$\% at $30$\%, and then rises steeply: $\CEsrF$\% at $\CEpsTen$\% and
+$\CEsrG$\% at $100$\%.
+
+Two things follow. First, the operational quantity is the perturbation the
+feature representation permits, not the sophistication of the search inside it.
+A defender who can bound how far a flow's statistics may be pushed while the
+attack still functions has bounded the evasion rate, whatever optimiser the
+attacker brings. Second, a budget of $50$\% per feature on statistics such as
+mean packet length and flow bytes per second is a large perturbation, and
+whether an attack surviving it remains the same attack is a problem-space
+question this feature-space experiment cannot answer.
+
+%% ===========================================================================
+\section{The Reported Rate Is a Property of the Cohort}
+\label{sec:cohort}
+
+The pooled ESR of Section~\ref{sec:sweep2} is a weighted average over a cohort
+we constructed, and this section shows that the weights matter more than the
+optimiser does. Everything below is read off the same \CNsweep{} flows and the
+same sweep file; no new run is involved.
+
+\subsection{The attack shifts every score by almost the same amount}
+\label{sec:shift}
+
+Start with what the perturbation does to the detector's output rather than with
+whether it crosses the threshold. Table~\ref{tab:shift} gives the distribution
+of $\Delta p = p_0 - p_\varepsilon$, the drop from the unperturbed probability to
+the best probability any arm reaches inside the box. At $\varepsilon = 100$\%
+the median drop is \XShiftMed{} with a standard deviation of \XShiftSd{} and an
+interquartile range of [\XShiftQone, \XShiftQthree]. Across \CNsweep{} flows spanning
+the full range of initial confidence, the attack moves the score by
+approximately one fixed amount.
+
+That is not the behaviour of an adaptive search finding per-flow weaknesses. It
+is the behaviour of a roughly linear response: within the box the detector's
+score is close to an affine function of the ten manipulable features, so pushing
+every feature to its permitted extreme buys a displacement that barely depends
+on where the flow started. The dispersion that does exist (\XShiftSd{} at
+$\varepsilon = 100$\%) is small next to the spread of $p_0$ itself.
+
+\begin{table}[t]
+\caption{Distribution of the score drop $\Delta p = p_0 - p_\varepsilon$ over
+$n=\CNsweep$ flows, best arm per flow. The drop is close to a constant at every
+budget.}
+\label{tab:shift}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrlr@{}}
+\toprule
+$\varepsilon$ & Median & SD & IQR & Max \\
+\midrule
+%%ROWS:tab_shift%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Consequently the starting score, not the attack, decides the outcome}
+\label{sec:decides}
+
+If the attack subtracts a near-constant $s$ from every score, then a flow evades
+exactly when $p_0 - s < \tau$, that is, when $p_0 < \tau + s$. That prediction
+uses nothing about the flow except its unperturbed probability and nothing about
+the attack except one median.
+
+Table~\ref{tab:rule} tests it at every budget. At $\varepsilon = 100$\% the rule
+``evades if and only if $p_0 < \XThr$'' is correct for \XRuleOk{} of \CNsweep{}
+flows, \XRulePct\%, and the point-biserial correlation between $p_0$ and the
+evasion indicator is $\XCorr$. The rule is weaker at intermediate budgets, where
+the constant shift is small enough that the dispersion around it matters
+relative to the distance to the threshold, and it is vacuous at
+$\varepsilon \le 10$\% where nothing evades at all. At the budget the headline
+number comes from, it is nearly exact.
+
+\begin{table}[t]
+\caption{How much of the outcome the unperturbed probability alone explains. The
+predicted threshold is $\tau$ plus the median drop at that budget; the last
+column is the point-biserial correlation between $p_0$ and evasion.}
+\label{tab:rule}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+$\varepsilon$ & Threshold & Correct & \% & $r_{pb}$ \\
+\midrule
+%%ROWS:tab_rule%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{So the pooled rate is whatever the stratum mix makes it}
+\label{sec:mix}
+
+Table~\ref{tab:stratumesr} gives ESR by confidence stratum. At
+$\varepsilon = 100$\% the three strata report \XEsrBnd\%
+(\XEvBnd{} of \XNBnd), \XEsrMed\% (\XEvMed{} of \XNMed) and \XEsrHi\%
+(\XEvHi{} of \XNHi). At $\varepsilon = 50$\% they report \XEsrHalfBnd\%,
+\XEsrHalfMed\% and \XEsrHalfHi\%. The pooled figure of \CEsrG\% at
+$\varepsilon = 100$\% is an average of a rate near one and a rate near zero,
+and where it lands is set by how many flows we drew from each band.
+
+The consequence is worth stating arithmetically. Our cohort is
+\XNBnd{}/\XNMed{}/\XNHi{} across the three bands. A cohort of the same size
+drawn entirely from the high-confidence band would have reported \XEsrHi\%. One
+drawn entirely from the medium band would have reported \XEsrMed\%. Both would
+have used the identical attack, the identical detector, the identical budget and
+the identical code. The span between those two numbers is the whole range that
+this experiment can report, and nothing in the attack pipeline determines where
+inside it the answer falls.
+
+This is the same lesson as the budget bug of Section~\ref{sec:bug}, arriving
+from the other direction. There, a quantity that looked like attack capability
+turned out to be an artefact of how the constraint was applied. Here, a quantity
+that looks like attack capability turns out to be an artefact of how the
+evaluation cohort was assembled. In both cases the number moves by tens of
+percentage points without the attack changing at all, and in both cases the
+paper reporting it can be entirely correct about its own arithmetic.
+
+\paragraph{What to report instead.} An evasion-rate headline should be
+accompanied by the stratification of the cohort over the detector's own output,
+and preferably reported per stratum rather than pooled. The per-stratum numbers
+are stable statements about the detector --- it is hard to push a flow the
+detector is confident about below the threshold, easy for one near it: while
+the pooled number is a statement about the sampling frame masquerading as one
+about the attack. We report both throughout, and we take the per-stratum table
+as the result.
+
+\begin{table*}[t]
+\caption{Evasion rate (\%) by confidence stratum and budget, $n=\CNsweep$
+flows. Rows are stable properties of the detector; the pooled row is a weighted
+average whose weights are our sampling choice.}
+\label{tab:stratumesr}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Stratum & $n$ & $5$\% & $10$\% & $15$\% & $20$\% & $30$\% & $50$\% & $100$\% \\
+\midrule
+%%ROWS:tab_stratum_esr%%
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{The oracle over arms buys nothing}
+\label{sec:oracle}
+
+One further check, because taking the best of several attacks per flow is a
+selection procedure and selection procedures inflate. Table~\ref{tab:armeps}
+reports each arm separately against the oracle that takes the minimum over all
+three.
+
+The upper-corner arm evades \XArmHiNever{} flows at every budget: pushing the
+manipulable features up is simply the wrong direction against this detector.
+Greedy coordinate descent matches the oracle at every budget in the sweep
+(\XGreedyEqBest), so the oracle's advantage over the single best arm is zero
+flows everywhere. The inflation we were checking for does not occur, and we
+report the check rather than the reassurance: had it occurred, every ESR in this
+paper would need a multiplicity correction, and the reason it does not is that
+one arm dominates rather than that best-of-three is a safe construction.
+
+\begin{table}[t]
+\caption{Flows evaded by each arm separately and by the oracle over all three,
+out of $n=\CNsweep$. Greedy descent matches the oracle at every budget.}
+\label{tab:armeps}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Arm & $5$\% & $10$\% & $15$\% & $20$\% & $30$\% & $50$\% & $100$\% \\
+\midrule
+%%ROWS:tab_arm_eps%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ===========================================================================
+
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{A budget bug looks like a capability result}
+The failure mode here is worth naming because it is not specific to this
+experiment. Any comparison of search strategies under a matched budget is
+really two claims: that the strategies differ, and that the budget was equal.
+When the budget is enforced incrementally rather than absolutely, the second
+claim quietly becomes false in a way that is correlated with the first, because
+the strategy that moves most gains the most budget. The result then reads as a
+capability difference and is reported as one.
+
+What makes it hard to catch is that every individual step is legal. No single
+iteration violates the $\pm\budgetpct$\% rule; only the composition does. A
+reviewer checking the perturbation code one step at a time sees nothing wrong.
+The check that catches it is not a code review but an assertion on the output:
+compare each final vector against the original and confirm every coordinate is
+inside the stated box. That assertion costs three lines and would have failed
+on the first flow.
+
+\subsection{A one-call baseline should be mandatory}
+The corrected table contains a baseline the original did not: evaluating the
+detector once at the corner of the box most favourable to the attacker. It
+matches or beats twenty iterations of every search strategy, including the
+language model.
+
+We recommend it as a standard control in feature-space evasion work. It is one
+detector call, it requires no optimiser, and it establishes what the budget
+alone yields before any search is credited. A strategy that does not clear it
+has not demonstrated search; it has demonstrated the budget. That is precisely
+what our earlier result did, and no amount of strategy comparison would have
+revealed it, because all four arms were being measured against each other rather
+than against the constraint.
+
+\subsection{What a defender should take from this}
+The practical reading is narrower than the one we previously offered, and
+sturdier. Exposing a confidence score did not, in this setting, let any attacker
+cross the threshold within a realistic perturbation budget. The detector's
+resistance here comes from the size of the box, not from any property of the
+score interface, so the defensive lever is the feature representation: which
+statistics an attacker can move, and how far, while the traffic still does what
+it was sent to do.
+
+Score hiding remains defensible on other grounds, and we take no position on it
+here. What we can no longer offer as evidence for it is this experiment.
+
+%% ===========================================================================
+\section{Limitations}
+\label{sec:limitations}
+
+\emph{The LLM arm is partial.} \CLlmN\ of \CN\ flows, all from the
+high-confidence stratum, because the run ended before completing the cohort.
+The bound it supports is $\CLlmCPhi$\%, which is weak. It is enough to say the
+model did not evade where the cheap baselines also did not, and not enough to
+rank it against them.
+
+\emph{One detector, one attack class, one dataset.} A Random Forest on
+CICIDS2017 DDoS flows. A margin-based detector with a smooth score surface may
+behave differently under the same search, and the dataset's known labelling and
+feature-construction defects are inherited here.
+
+\emph{Feature space, not problem space.} We perturb the flow statistics
+directly. Whether a perturbation of the size the sweep requires corresponds to
+traffic an attacker could actually emit, and that still achieves the attack, is
+not tested and is the harder half of the problem.
+
+\emph{The sweep reports the best arm per flow.} It is therefore an upper bound
+on what any one strategy achieves at that budget, chosen to be conservative
+about the defender's position rather than favourable to ours.
+
+\emph{The null is a null.} Zero successes in \CN\ trials bounds the rate below
+$\CCPhi$\%; it does not establish that the rate is zero. A larger cohort would
+tighten the bound and nothing here rules out a rare evasion.
+
+%% ===========================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+We reported that an LLM-guided search evades $\LLMesr$\% of DDoS flows against a
+Random-Forest detector while classical optimisers manage almost none. The
+per-feature budget in that experiment was enforced against the current vector
+rather than the original flow, so the reachable set grew multiplicatively with
+the iteration count and the strategy that moved most received the most budget.
+The result measured the bug.
+
+With the box fixed to the original vector, every strategy evades $\CGreedyEv$ of
+\CN\ flows, and a single detector call at the corner of the box matches twenty
+iterations of any search. The language model is no exception: $\CLlmEv$ of
+\CLlmN, with the smallest score movement of any arm at the second-highest cost.
+
+What does move the rate is the budget itself, from nothing below $\CEpsFirst$\%
+to $\CEsrF$\% at $\CEpsTen$\%. The defensible claim from this work is about how
+far a flow may be perturbed, not about who is doing the perturbing.
+
+\section*{CRediT authorship contribution statement}
+
+\textbf{Son X. Ha:} Conceptualization, Formal analysis, Investigation, Writing -- original draft, Writing -- review \& editing.
+\textbf{Phat T. Tran-Truong:} Methodology, Validation, Formal analysis.
+\textbf{Xuan-Bach Le:} Software, Validation, Investigation.
+\textbf{Luong Hoang Huong:} Supervision, Resources, Writing -- review \& editing.
+\textbf{Tung Q. Nguyen:} Software, Data curation, Visualization, Investigation.
+\textbf{Tran Gia Huy:} Investigation, Data curation.
+\textbf{Nhan Nguyen Tran Kha:} Investigation, Visualization.
+\textbf{Thuc Nguyen Minh:} Investigation, Data curation.
+\textbf{Nguyen Ngoc Phien:} Supervision, Project administration, Writing -- review \& editing.
+\section*{Declaration of competing interest}
+
+The authors declare that they have no known competing financial interests or
+personal relationships that could have appeared to influence the work reported
+in this paper.
+
+\section*{Funding}
+
+This research received no specific grant from any funding agency in the
+public, commercial or not-for-profit sectors.
+
+\section*{Data availability}
+
+The measured result files, the generator scripts that read them, and the LaTeX
+sources that substitute their output into this document are released with the
+paper. Every number, table and figure here is produced by running those scripts
+against those files; none is transcribed by hand.
+
+The artefact (result files, generator scripts and \LaTeX{} sources) is not
+publicly posted at the time of submission. We will deposit it in a public
+repository under a persistent identifier upon acceptance, and we can supply it
+to the editorial office at any point during review.
+
+\bibliographystyle{elsarticle-harv}
+\bibliography{refs}
+
+\end{document}
