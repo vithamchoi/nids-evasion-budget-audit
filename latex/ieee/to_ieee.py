@@ -80,6 +80,10 @@ PREAMBLE_EXTRA = r"""
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{url}
+%% cho phep ngat dong URL dai o dau gach noi, neu khong thi ten repo
+%% dai hon be rong mot cot 10pt se tran ra le
+\def\UrlBreaks{\do\/\do\-\do\.\do\_\do\:\do\?\do\&\do\=\do\#\do\@}
+\Urlmuskip=0mu plus 1mu\relax
 \usepackage{orcidlink}
 %% IEEE dung trich dan so [1]. elsarticle/acmart dung natbib (\citep, \citet);
 %% anh xa ca hai ve \cite de khong phai sua than bai.

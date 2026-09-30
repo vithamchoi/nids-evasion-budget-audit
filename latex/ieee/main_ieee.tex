@@ -12,6 +12,10 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{url}
+%% cho phep ngat dong URL dai o dau gach noi, neu khong thi ten repo
+%% dai hon be rong mot cot 10pt se tran ra le
+\def\UrlBreaks{\do\/\do\-\do\.\do\_\do\:\do\?\do\&\do\=\do\#\do\@}
+\Urlmuskip=0mu plus 1mu\relax
 \usepackage{orcidlink}
 %% IEEE dung trich dan so [1]. elsarticle/acmart dung natbib (\citep, \citet);
 %% anh xa ca hai ve \cite de khong phai sua than bai.
@@ -243,8 +247,7 @@ withdraws it.
 The per-feature budget was enforced against the \emph{current} perturbed vector
 rather than the original flow, so each iteration could move a further
 $\pm\budgetpct$\% from wherever the search had already reached. Over
-$K=\Kbudget$ iterations the reachable set is not a box around the flow; it is
-unbounded in practice.
+$K=\Kbudget$ iterations the reachable set is unbounded in practice.
 
 Re-enforcing the budget against the original vector, every strategy evades
 $\CGreedyEv$ of \CN\ flows: a one-call corner query, greedy, random-$K$, and NES
@@ -252,15 +255,14 @@ at three population sizes, all at $0.0$\% with an exact upper bound of
 $\CCPhi$\%. The LLM arm evades $\CLlmEv$ of \CLlmN\ and moves the score less
 than a single corner query does.
 
-What does decide evasion is the perturbation magnitude and the cohort. Sweeping
-the magnitude, nothing succeeds below $\CEpsFirst$\%, and $10$\% success needs
-$\CEpsTen$\%. Within a budget the attack subtracts a near-constant amount from
-the score: median $\XShiftMed$, SD $\XShiftSd$ at $\varepsilon=100$\% --- so
-a flow evades essentially when its unperturbed probability lies below
-$\XThr$, a rule correct for $\XRuleOk$ of \CN\ flows. Evasion rate by
-confidence stratum is therefore $\XEsrBnd$\%, $\XEsrMed$\% and $\XEsrHi$\%,
-and the pooled $\CEsrG$\% is a weighted average whose weights are our sampling
-choice rather than a property of the attack.
+What decides evasion is the perturbation magnitude and the cohort. Nothing
+succeeds below $\CEpsFirst$\%, and $10$\% success needs $\CEpsTen$\%. Within a
+budget the attack subtracts a near-constant amount from the score (median
+$\XShiftMed$, SD $\XShiftSd$ at $\varepsilon=100$\%), so a flow evades when its
+unperturbed probability lies below $\XThr$, a rule correct for $\XRuleOk$ of
+\CN\ flows. Evasion rate by confidence stratum is $\XEsrBnd$\%, $\XEsrMed$\%
+and $\XEsrHi$\%; the pooled $\CEsrG$\% is a weighted average whose weights are
+our sampling choice, not a property of the attack.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -1180,10 +1182,12 @@ sources that substitute their output into this document are released with the
 paper. Every number, table and figure here is produced by running those scripts
 against those files; none is transcribed by hand.
 
-The artefact (result files, generator scripts and \LaTeX{} sources) is not
-publicly posted at the time of submission. We will deposit it in a public
-repository under a persistent identifier upon acceptance, and we can supply it
-to the editorial office at any point during review.
+The artefact (result files, generator scripts and \LaTeX{} sources) is publicly
+available at \url{https://github.com/vithamchoi/nids-evasion-budget-audit}, where the commit that
+produced this version is tagged \texttt{v1.0.0}. Re-running the generators in
+\path{latex/} against \path{results/} regenerates every table, figure and
+inline number in this paper. The same artefact will be deposited in a public
+archive under a persistent identifier.
 
 
 \bibliographystyle{IEEEtran}
